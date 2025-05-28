@@ -41,17 +41,19 @@ async def command_handler(event):
         monitoring_active = False
         await event.respond("تم إيقاف المراقبة.")
 
-# مراقبة القناة واستخراج الكود وإرساله مباشرة إلى البوت
+# مراقبة القناة واستخراج الكود المناسب وإرساله للبوت
 @client.on(events.NewMessage(chats=channel_username))
 async def monitor_channel(event):
     if not monitoring_active:
         return
 
-    match = re.findall(channel_regex, event.raw_text)
-    if not match:
+    matches = re.findall(channel_regex, event.raw_text)
+    if not matches:
+        print("ما تم العثور على أي كود.")
         return
 
-    code = match[0]
+    # إذا فيه 4 أكواد أو أكثر، خذ الرابع، غير هيك خذ الأول
+    code = matches[3] if len(matches) >= 4 else matches[0]
     print(f"تم استخراج الكود: {code}")
 
     try:
