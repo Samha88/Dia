@@ -12,9 +12,9 @@ session_name = 'my_session'
 allowed_chat_ids = {7726679532}
 
 # إعداد القناة والبوت
-channel_username = "ichancy_Bot_Dragon"
+channel_username = "diamondichancy"
 channel_regex = r"\b[a-zA-Z0-9]{8,12}\b"
-bot_username = "ichancy_dragon_bot"
+bot_username = "DiamondIchancyBot"
 
 # تهيئة العميل
 client = TelegramClient(session_name, api_id, api_hash)
