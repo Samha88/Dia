@@ -12,7 +12,7 @@ session_name = 'my_session'
 allowed_chat_ids = {7726679532}
 
 # إعداد القناة والبوت
-channel_username = "sam91uyy1"
+channel_username = "diamondichancy"
 channel_regex = r"\b[a-zA-Z0-9]{8,19}\b"
 bot_username = "DiamondIchancyBot"
 
