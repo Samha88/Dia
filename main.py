@@ -76,9 +76,9 @@ async def start_all():
 
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', 8081)
+    site = web.TCPSite(runner, '0.0.0.0', 8086)
     await site.start()
-    print("Web server running on http://0.0.0.0:8081")
+    print("Web server running on http://0.0.0.0:8086")
     await client_loop
 
 if __name__ == "__main__":
